@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LoadableResult_Example' do
+  pod 'LoadableResult', :path => '../'
+
+  target 'LoadableResult_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
