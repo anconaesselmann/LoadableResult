@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LoadableResult'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'LoadableResult is a Result type with a loading state'
   s.swift_version    = '5.0'
 
@@ -29,7 +29,7 @@ LoadableResult allows services to expose a loading state.
   s.source           = { :git => 'https://github.com/anconaesselmann/LoadableResult.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'LoadableResult/Classes/**/*'
 
