@@ -1,0 +1,16 @@
+PODS:
+  - LoadableResult (0.1.0)
+
+DEPENDENCIES:
+  - LoadableResult (from `../`)
+
+EXTERNAL SOURCES:
+  LoadableResult:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LoadableResult: a864ac85c239031f02e298b25185094ef110fa06
+
+PODFILE CHECKSUM: 321c9149ea64e14a2ee96932137eef092c1e218e
+
+COCOAPODS: 1.8.4

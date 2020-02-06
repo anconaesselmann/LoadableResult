@@ -8,8 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LoadableResult'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LoadableResult.'
+  s.version          = '0.1.1'
+  s.summary          = 'LoadableResult is a Result type with a loading state'
+  s.swift_version    = '5.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +19,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+LoadableResult allows services to expose a loading state.
                        DESC
 
-  s.homepage         = 'https://github.com/ancona-esselmann/LoadableResult'
+  s.homepage         = 'https://github.com/anconaesselmann/LoadableResult'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ancona-esselmann' => 'axel@vida.com' }
-  s.source           = { :git => 'https://github.com/ancona-esselmann/LoadableResult.git', :tag => s.version.to_s }
+  s.author           = { 'ancona-esselmann' => 'axel@anconaesselmann.com' }
+  s.source           = { :git => 'https://github.com/anconaesselmann/LoadableResult.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'LoadableResult/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'LoadableResult' => ['LoadableResult/Assets/*.png']
   # }
