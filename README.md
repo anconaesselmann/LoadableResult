@@ -22,7 +22,7 @@ pod 'LoadableResult'
 
 ## Author
 
-ancona-esselmann, axel@anconaesselmann.com
+anconaesselmann, axel@anconaesselmann.com
 
 ## License
 
