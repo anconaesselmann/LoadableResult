@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LoadableResult'
-  s.version          = '0.1.5'
+  s.version          = '0.2.0'
   s.summary          = 'LoadableResult is a Result type with a loading state'
   s.swift_version    = '5.0'
 
@@ -30,6 +30,7 @@ LoadableResult allows services to expose a loading state.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.watchos.deployment_target = '3.0'
 
   s.source_files = 'LoadableResult/Classes/**/*'
 
