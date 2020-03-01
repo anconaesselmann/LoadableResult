@@ -71,6 +71,34 @@ public enum LoadableResult<T> {
         }
     }
 
+    /// Exposes the loaded state of a LoadableResult and provides ability to give defaults for non-loaded states
+    public func unpack(
+        whenInactive: T? = nil,
+        whenLoading: T? = nil,
+        whenError: T? = nil
+    ) -> T? {
+        return map { state -> T? in
+            switch state {
+            case .inactive:
+                return whenInactive
+            case .loading:
+                return whenLoading
+            case .loaded:
+                return self.loaded
+            case .error:
+                return whenError
+            }
+        }
+    }
+
+    public func unpack(whenNotLoaded: T) -> T {
+        return unpack(
+            whenInactive: whenNotLoaded,
+            whenLoading: whenNotLoaded,
+            whenError: whenNotLoaded
+        ) ?? whenNotLoaded
+    }
+
 }
 
 extension LoadableResult: Equatable where T: Equatable {

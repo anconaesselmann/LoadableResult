@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LoadableResult'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'LoadableResult is a Result type with a loading state'
   s.swift_version    = '5.0'
 
