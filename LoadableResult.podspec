@@ -17,4 +17,10 @@ LoadableResult allows services to expose a loading state.
   s.watchos.deployment_target = '3.0'
 
   s.source_files = 'LoadableResult/Classes/**/*'
+
+  # s.test_spec 'Tests' do |test_spec|
+  #   test_spec.source_files = 'Example/Tests/*.{swift}'
+  #   test_spec.frameworks = 'UIKit'
+  #   # test_spec.dependency '' # This dependency will only be linked with your tests.
+  # end
 end
