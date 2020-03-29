@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## LoadableResult
 
-Copyright (c) 2020 ancona-esselmann <axel@vida.com>
+Copyright (c) 2020 anconaesselmann <axel@anconaesselmann.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

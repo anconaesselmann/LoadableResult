@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'LoadableResult'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'LoadableResult is a Result type with a loading state'
-  s.swift_version    = '5.0'
+  s.swift_version    = '5.2'
 
   s.description      = <<-DESC
 LoadableResult allows services to expose a loading state.

@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		1BC9E251A4CB50FD2237F824 /* Pods-LoadableResult_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoadableResult_Example.release.xcconfig"; path = "Target Support Files/Pods-LoadableResult_Example/Pods-LoadableResult_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1BD2681310246850AA838317 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		2543F19572A4807F939886CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1BD2681310246850AA838317 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2543F19572A4807F939886CE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		35B255E82F362EC31719415D /* Pods_LoadableResult_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoadableResult_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FE05C5E653003C10BC685E /* Pods-LoadableResult_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoadableResult_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LoadableResult_Tests/Pods-LoadableResult_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		528F12309A6CF1F2A750A94E /* Pods-LoadableResult_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoadableResult_Tests.release.xcconfig"; path = "Target Support Files/Pods-LoadableResult_Tests/Pods-LoadableResult_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		73BD0ACB73A373BB79D718DA /* Pods_LoadableResult_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoadableResult_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		758EF5C30AC51E53CCBFF10E /* LoadableResult.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LoadableResult.podspec; path = ../LoadableResult.podspec; sourceTree = "<group>"; };
+		758EF5C30AC51E53CCBFF10E /* LoadableResult.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LoadableResult.podspec; path = ../LoadableResult.podspec; sourceTree = "<group>"; };
 		B99CF61E9212748795E0F3CF /* Pods-LoadableResult_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoadableResult_Example.debug.xcconfig"; path = "Target Support Files/Pods-LoadableResult_Example/Pods-LoadableResult_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				46FE05C5E653003C10BC685E /* Pods-LoadableResult_Tests.debug.xcconfig */,
 				528F12309A6CF1F2A750A94E /* Pods-LoadableResult_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -419,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -479,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoadableResult/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoadableResult/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

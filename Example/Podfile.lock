@@ -1,5 +1,5 @@
 PODS:
-  - LoadableResult (0.1.0)
+  - LoadableResult (0.2.3)
 
 DEPENDENCIES:
   - LoadableResult (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LoadableResult: a864ac85c239031f02e298b25185094ef110fa06
+  LoadableResult: e92ab37c5077e56f8c3f3b69d5111f186339b603
 
 PODFILE CHECKSUM: 321c9149ea64e14a2ee96932137eef092c1e218e
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

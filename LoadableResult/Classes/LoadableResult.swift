@@ -28,7 +28,7 @@ public enum LoadableResult<T> {
         return transform(self)
     }
 
-    /// The loaded state gets transformed to a new type.
+    /// The loaded state gets transformed to a new type. The transformation should not be able to fail
     /// In case acces to each individual state is necessary use map.
     ///
     /// Example:
@@ -42,6 +42,93 @@ public enum LoadableResult<T> {
             return .loading
         case .loaded(let loaded):
             return .loaded(transform(loaded))
+        case .error(let error):
+            return .error(error)
+        }
+    }
+
+    /// The loaded state gets transformed to a new type. The transformation might fail in an upredictable way
+    ///
+    /// Example:
+    public func mapLoaded<E>(_ transform: @escaping (T) -> Result<E, Error>) -> LoadableResult<E> {
+        switch self {
+        case .inactive:
+            return .inactive
+        case .loading:
+            return .loading
+        case .loaded(let loaded):
+            let transformed = transform(loaded)
+            switch transformed {
+            case .success(let success):
+                return .loaded(success)
+            case .failure(let error):
+                return .error(error)
+            }
+        case .error(let error):
+            return .error(error)
+        }
+    }
+
+    /// The loaded state gets transformed to a new type. The transformation might fail but in a predictable way.
+    ///
+    /// Example:
+    public func mapLoaded<E>(onFailure error: Error, transform: @escaping (T) -> E?) -> LoadableResult<E> {
+        switch self {
+        case .inactive:
+            return .inactive
+        case .loading:
+            return .loading
+        case .loaded(let loaded):
+            if let transformed = transform(loaded) {
+                 return .loaded(transformed)
+            } else {
+                return .error(error)
+            }
+        case .error(let error):
+            return .error(error)
+        }
+    }
+
+    /// The loaded state gets transformed to a new type. The transformation might fail, in which case we have a default ot fallback on.
+    ///
+    /// Example:
+    public func mapLoaded<E>(onFailure fallback: E, transform: @escaping (T) -> E?) -> LoadableResult<E> {
+        switch self {
+        case .inactive:
+            return .inactive
+        case .loading:
+            return .loading
+        case .loaded(let loaded):
+            if let transformed = transform(loaded) {
+                 return .loaded(transformed)
+            } else {
+                return .loaded(fallback)
+            }
+        case .error(let error):
+            return .error(error)
+        }
+    }
+
+    /// The loaded state gets transformed to a new type. The transformation might fail but recovery might be possible.
+    ///
+    /// Example:
+    public func mapLoaded<E>(onFailure failureTransformation: (T) -> Result<E, Error>, transform: @escaping (T) -> E?) -> LoadableResult<E> {
+        switch self {
+        case .inactive:
+            return .inactive
+        case .loading:
+            return .loading
+        case .loaded(let loaded):
+            if let transformed = transform(loaded) {
+                 return .loaded(transformed)
+            } else {
+                switch failureTransformation(loaded) {
+                case .success(let revovered):
+                    return .loaded(revovered)
+                case .failure(let error):
+                    return .error(error)
+                }
+            }
         case .error(let error):
             return .error(error)
         }
@@ -105,6 +192,7 @@ extension LoadableResult: Equatable where T: Equatable {
     /// Note: Error types are not compared to determine equality, only the fact that an error occured.
     public static func == (lhs: LoadableResult<T>, rhs: LoadableResult<T>) -> Bool {
         switch (lhs, rhs) {
+        case (.inactive, .inactive): return true
         case (.loading, .loading): return true
         case (.error, .error): return true
         case (.loaded(let lhe), .loaded(let rhe)): return lhe == rhe
